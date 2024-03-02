@@ -1,0 +1,742 @@
+/* Adding Google Font styles localy start */
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 600;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 800;
+  src: url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: 500;
+  src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: 600;
+  src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  font-weight: 800;
+  src: url("assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-bold-webfont.woff") format("woff");
+}
+
+/* Adding Google Font styles localy end */
+
+/* Adding default styles to the website */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%; /* Add this styles to control width of the image elements */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none; /* Remove default decoration on links */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Use Roboto font for the body */
+  font-weight: 400; /* Default font-weight */
+  color: #202020; /* Default color of text */
+}
+
+/* We will use destkop first aproach as we assum that most users will visit this website via PC/laptop */
+
+/* Styles for header start */
+
+.header {
+  box-shadow: 0px 3px 11px 0px rgba(215, 215, 215, 0.5);
+  margin: 0 0 20px;
+  padding: 0;
+  background-color: #fffcfc;
+  position: relative;
+  transition: padding-bottom 0.3s ease; /* Add transition property */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header-nav-links {
+  margin-left: auto;
+  margin-right: 20px;
+}
+.header-nav-links a {
+  font-size: 17px;
+  color: #202020;
+  font-weight: 500;
+  padding: 13px 20px;
+  transition: 0.1s all;
+}
+.header-nav-links .active-link {
+  color: #0d68d4;
+}
+
+.header-nav-links a:hover {
+  color: #0d68d4;
+}
+
+.header-nav-call-to-action-btn {
+  font-weight: 500;
+  font-size: 16px;
+  fill: #0d68d4;
+  color: #0d68d4;
+  background-color: #ffffff;
+  border: 1px solid #0d68d4;
+  border-radius: 37px;
+  padding: 15px 36px;
+  transition: all 0.3s;
+}
+
+.header-nav-call-to-action-btn:hover,
+.header-nav-call-to-action-btn:focus {
+  color: #ffffff;
+  background-color: #0d68d4;
+}
+
+.header-nav-for-mobile {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 50%; /* Move the element to the middle horizontally */
+  transform: translateX(-50%); /* Adjust to center the element */
+  width: 598px;
+}
+
+.header-nav-mobile-links a {
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  color: #000000;
+  transition: 0.1s all;
+}
+.header-nav-mobile-links .active-link {
+  color: #ffffff;
+  background-color: #0d68d4;
+}
+
+.header-nav-mobile-links a:hover {
+  color: #ffffff;
+  background-color: #0d68d4;
+}
+/* 
+--------------------------------------------------------
+openbtn
+-------------------------------------------------------- */
+.openbtn {
+  background: #0d68d4;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.openbtn .openbtn-area {
+  transition: all 0.4s;
+}
+
+.openbtn span {
+  position: absolute;
+  background: #fff;
+  display: inline-block;
+  border-radius: 3px;
+  left: 13px;
+  height: 3px;
+  transition: all 0.4s;
+  width: 50%;
+  &:nth-of-type(1) {
+    top: 16px;
+  }
+  &:nth-of-type(2) {
+    top: 24px;
+  }
+  &:nth-of-type(3) {
+    top: 32px;
+  }
+}
+
+.openbtn.active .openbtn-area {
+  transform: rotatex(360deg);
+}
+
+.openbtn.active span {
+  &:nth-of-type(1) {
+    width: 45%;
+    top: 18px;
+    left: 14px;
+    transform: translateY(6px) rotate(-135deg);
+  }
+  &:nth-of-type(2) {
+    opacity: 0;
+  }
+  &:nth-of-type(3) {
+    width: 45%;
+    top: 30px;
+    left: 14px;
+    transform: translateY(-6px) rotate(135deg);
+  }
+}
+
+/* Styles for header end */
+
+/* Styles for section one start */
+.section-one {
+  background-color: #ffffff; /* Fallback background color */
+  background-image: url("images/background-image.jpg"); /* URL of your background image */
+
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; /* Transition for background, border, border-radius, and box-shadow properties */
+  padding: 10px 0; /* Padding for the section */
+}
+
+.section-one-content {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.left-side,
+.right-side {
+  flex-grow: 1;
+  width: 100%;
+}
+.left-side {
+  text-align: center;
+}
+.left-side h3 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 29px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+.left-side h3 .lighter {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.left-side p {
+  margin-bottom: 1.5em;
+  font-size: 17px;
+}
+
+.right-side h2 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 39px;
+  font-weight: 800;
+  line-height: 45px;
+  margin-bottom: 1.5em;
+}
+
+.right-side p {
+  font-size: 16px;
+  margin-bottom: 1.2em;
+}
+/* Styles for section one end */
+
+/* Styles for section two start */
+.section-two {
+  background-color: #f8f8f8;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 50px;
+  text-align: center;
+}
+
+.section-two-content {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section-two .heading-title {
+  color: #0d68d4;
+  font-family: "Roboto-Bold", Sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.section-two .heading-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  height: 3.2px; /* Height of the border */
+  background-color: #0d68d4; /* Same color as the heading */
+}
+
+.clients-logo {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.clients-logo img {
+  filter: brightness(100%) contrast(100%) saturate(0%) blur(0px)
+    hue-rotate(0deg);
+  transition-duration: 0.5s;
+  width: 204px;
+  height: 204px;
+}
+
+.clients-logo img:hover {
+  filter: none;
+}
+
+/* Styles for section two end */
+
+/* Styles for section three start */
+.section-three {
+  background-color: transparent;
+  background-image: linear-gradient(120deg, #0a83cf 0%, #0e4a93 100%);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 70px 0px 70px 0px;
+}
+
+.section-three-content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1140px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.section-three-content p {
+  font-family: "Roboto-Bold", Sans-serif;
+  font-size: 17px;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section-three-content h2 {
+  font-family: "Roboto-Bold", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.section-three-content h2::after {
+  content: "";
+  display: block;
+  margin: 20px auto 40px;
+  width: 100px;
+  height: 3.2px; /* Height of the border */
+  background-color: #ffffff; /* Same color as the heading */
+}
+
+.section-three-content .join-us-btn {
+  font-family: "Roboto-Bold", Sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 30px;
+  fill: #ffffff;
+  color: #ffffff;
+  background-color: #61ce7000;
+  border: 1px solid #ffffff;
+  border-radius: 37px;
+  transition: all 0.3s;
+}
+
+.section-three-content .join-us-btn:hover {
+  color: #0d68d4;
+  background-color: #ffffff;
+}
+/* Styles for section three end */
+
+/* Styles for section four start */
+
+.section-four {
+  background-color: #131313;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.section-four-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.menu-links,
+.social-media-links,
+.services {
+  width: 33.33%;
+}
+
+.section-four-content h4 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.section-four-content a {
+  display: block;
+  color: #ffffff;
+  padding: 13px 0;
+  line-height: 4px;
+}
+
+.section-four-content a:not(.current-link):hover {
+  color: #0d68d4;
+}
+
+.section-four-content .services .first-paragraph {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.section-four-content .services p:last-child {
+  margin-bottom: 1.5em;
+}
+/* Styles for section four end */
+
+/* Styles for scroll to top btn start */
+a.generate-back-to-top {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+.generate-back-to-top {
+  font-size: 20px;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  z-index: 10;
+  transition: opacity 300ms ease-in-out;
+}
+
+a.generate-back-to-top:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Styles for scroll to top btn end */
+
+/* Styles for footer start */
+.footer {
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 17px;
+  padding-bottom: 1.5em;
+}
+
+.footer p {
+  padding: 10px;
+}
+
+.footer a {
+  color: #0d68d4;
+}
+/* Styles for footer end */
+
+/* Media query styles below */
+
+/* Styles for clients-logo images to make them responsive for smaller screens start */
+
+@media only screen and (max-width: 1150px) {
+  .clients-logo img {
+    width: 193px;
+    height: 193px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .clients-logo img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .header-nav-for-mobile {
+    width: 590px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .clients-logo img {
+    width: 165px;
+    height: 165px;
+  }
+  .header-nav-for-mobile {
+    width: 540px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .clients-logo img {
+    width: 155px;
+    height: 155px;
+  }
+  .header-nav-for-mobile {
+    width: 490px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .clients-logo img {
+    width: 145px;
+    height: 145px;
+  }
+  .header-nav-for-mobile {
+    width: 440px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .clients-logo img {
+    width: 140px;
+    height: 140px;
+  }
+  .header-nav-for-mobile {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .clients-logo {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+  .clients-logo img {
+    width: 100%; /* This part we will review later !!! */
+    height: auto;
+  }
+}
+/* Styles for clients-logo images to make them responsive for smaller screens end */
+
+/* Styles for tablet and mobile start */
+
+/* Header styles - max-width 1024px start */
+
+@media only screen and (max-width: 1024px) {
+  .header-nav {
+    justify-content: flex-start;
+  }
+
+  .header-nav-links {
+    display: none;
+  }
+
+  .header-nav-call-to-action-btn {
+    display: none;
+  }
+  .header-nav-for-mobile {
+    display: block;
+  }
+}
+
+/* Header styles - max-width 1024px end */
+
+/* Styles for tablet mode max-width:768px start */
+
+@media only screen and (max-width: 768px) {
+  /* styles for header start */
+  .header {
+    padding-bottom: 100px;
+  }
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-nav-for-mobile {
+    position: absolute;
+    top: 100px;
+    left: 50%; /* Move the element to the middle horizontally */
+    transform: translateX(-50%); /* Adjust to center the element */
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* 
+--------------------------------------------------------
+openbtn
+-------------------------------------------------------- */
+  .openbtn {
+    background: #10568f;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .openbtn .openbtn-area {
+    transition: all 0.4s;
+  }
+
+  .openbtn span {
+    position: absolute;
+    background: #fff;
+    display: inline-block;
+    border-radius: 3px;
+    left: 13px;
+    height: 3px;
+    transition: all 0.4s;
+    width: 50%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 16px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 24px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 32px;
+  }
+
+  .openbtn.active .openbtn-area {
+    transform: rotatex(360deg);
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    width: 45%;
+    top: 18px;
+    left: 14px;
+    transform: translateY(6px) rotate(-135deg);
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    width: 45%;
+    top: 30px;
+    left: 14px;
+    transform: translateY(-6px) rotate(135deg);
+  }
+
+  /* Change background and color on hover */
+  .openbtn:hover {
+    background: #fff; /* White background */
+  }
+
+  .openbtn:hover span {
+    background: #10568f; /* Blue color */
+  }
+
+  /* styles for header end */
+
+  /* styles for sectin one start */
+  .section-one-content {
+    flex-direction: column;
+  }
+
+  .section-one-content .right-side {
+    padding: 20px;
+  }
+
+  .section-one .right-side h2 {
+    margin-bottom: 0.5em;
+  }
+  /* styles for sectin one end */
+
+  /* styles for sectin three start */
+  .section-three h2 {
+    font-size: 27px;
+  }
+  /* styles for sectin three end */
+
+  /* styles for sectin four start */
+  .section-four {
+    padding: 30px 0px;
+  }
+  .section-four-content {
+    flex-direction: column;
+  }
+  .menu-links,
+  .social-media-links,
+  .services {
+    width: 100%;
+    padding: 10px;
+  }
+  /* styles for sectin four end */
+}
+
+/* Styles for tablet mode max-width:768px start */
+/* Styles for tablet and mobile end */
