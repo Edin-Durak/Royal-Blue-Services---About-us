@@ -10,3 +10,5 @@ Original website: https://royalblueservices.net/about-us/
 My version: https://edin-durak.github.io/Royal-Blue-Services---About-us/
 
 On the image below, you can see a screenshot of the website as well.
+
+![Royal Blue](https://github.com/Edin-Durak/Royal-Blue-Services---About-us/assets/138677399/723390c4-405e-40f1-b150-5a71d14fb126)
